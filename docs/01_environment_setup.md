@@ -1,0 +1,12 @@
+- *base*
+	- created default env with `vagrant init`
+	- set ubuntu 22.04 as base
+- *network*
+	- assigning static ip for vm 192.168.56.10
+- *resources*
+	- assigning 2 cores
+	- assigning 2GB of ram
+- *provisioning*
+	- update and upgrade
+	- install git
+	- install fastfech

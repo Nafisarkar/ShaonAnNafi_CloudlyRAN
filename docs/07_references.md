@@ -1,0 +1,18 @@
+- #### Vagrant
+- *Basic*
+	- https://www.youtube.com/watch?v=czMCO1w-xQU
+	- https://www.youtube.com/watch?v=7DLfOGt8YvA&t=1764s
+	- https://www.youtube.com/watch?v=349ul4Wuj9I
+	- https://www.youtube.com/watch?v=bIJCN57N0Kc
+	- https://www.youtube.com/watch?v=Q6qL2tU1d-8
+	- https://www.youtube.com/watch?v=qKyqv4G64Yc
+	- https://www.youtube.com/watch?v=Dovd-CcyR7A
+	- https://www.youtube.com/watch?v=PF4NSHzW75g
+	- https://www.youtube.com/watch?v=aqqyJxvzsag
+- *Web*
+	- https://developer.hashicorp.com/vagrant/docs/networking/basic_usage
+	- https://developer.hashicorp.com/vagrant/docs/networking/forwarded_ports
+- *Shell provisioning*
+	- https://developer.hashicorp.com/vagrant/docs/provisioning/shell
+- *Image*
+	- [ubuntu22.04](https://portal.cloud.hashicorp.com/vagrant/discover/ubuntu/jammy64)
