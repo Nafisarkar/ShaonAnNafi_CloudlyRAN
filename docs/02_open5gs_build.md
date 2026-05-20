@@ -123,24 +123,27 @@ cd ../
   ```
 - Added configuration script - Will run after installing and invoking
 	- NRF
-		-
-		  sudo sed -i 's/mcc: 999/mcc: 001/g' "$CONF_DIR/nrf.yaml"
-		  sudo sed -i 's/mnc: 70/mnc: 01/g' "$CONF_DIR/nrf.yaml"
-
+		```
+        sudo sed -i 's/mcc: 999/mcc: 001/g' "$CONF_DIR/nrf.yaml"
+		sudo sed -i 's/mnc: 70/mnc: 01/g' "$CONF_DIR/nrf.yaml"
+        ```
 	- AMF
-		-
-		  sudo sed -i 's/mcc: 999/mcc: 001/g' "$CONF_DIR/amf.yaml"
-		  sudo sed -i 's/mnc: 70/mnc: 01/g' "$CONF_DIR/amf.yaml"
-		  sudo sed -i '/ngap:/,/metrics:/s/127.0.0.5/10.10.0.5/' "$CONF_DIR/amf.yaml"
-
+		```
+		sudo sed -i 's/mcc: 999/mcc: 001/g' "$CONF_DIR/amf.yaml"
+		sudo sed -i 's/mnc: 70/mnc: 01/g' "$CONF_DIR/amf.yaml"
+		sudo sed -i '/ngap:/,/metrics:/s/127.0.0.5/10.10.0.5/' "$CONF_DIR/amf.yaml"
+		```
 	- UPF
-		-
-		  sudo sed -i 's/address: 127.0.0.7/address: 10.11.0.7/g' "$CONF_DIR/upf.yaml"
+		```
+		sudo sed -i 's/address: 127.0.0.7/address: 10.11.0.7/g' "$CONF_DIR/upf.yaml"
+		```
 	- MME
-		-
-		  sudo sed -i 's/mcc: 999/mcc: 001/g' "$CONF_DIR/mme.yaml"
-		  sudo sed -i 's/mnc: 70/mnc: 01/g' "$CONF_DIR/mme.yaml"
-		  sudo sed -i '/s1ap:/,/gtpc:/s/127.0.0.2/10.10.0.2/' "$CONF_DIR/mme.yaml"
+		```
+		sudo sed -i 's/mcc: 999/mcc: 001/g' "$CONF_DIR/mme.yaml"
+		sudo sed -i 's/mnc: 70/mnc: 01/g' "$CONF_DIR/mme.yaml"
+		sudo sed -i '/s1ap:/,/gtpc:/s/127.0.0.2/10.10.0.2/' "$CONF_DIR/mme.yaml"
+		```
 	- SGWU
-		-
-		  sudo sed -i 's/address: 127.0.0.6/address: 10.11.0.6/g' "$CONF_DIR/sgwu.yaml"
+		```
+		sudo sed -i 's/address: 127.0.0.6/address: 10.11.0.6/g' "$CONF_DIR/sgwu.yaml"
+		```
