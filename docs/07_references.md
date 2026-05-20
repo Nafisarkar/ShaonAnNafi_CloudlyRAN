@@ -15,4 +15,16 @@
 - *Shell provisioning*
 	- https://developer.hashicorp.com/vagrant/docs/provisioning/shell
 - *Image*
-	- [ubuntu22.04](https://portal.cloud.hashicorp.com/vagrant/discover/ubuntu/jammy64)
+	- [ubuntu22.04](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-22.04)
+-
+- #### Open5gs
+- *Web*
+	- https://open5gs.org/open5gs/docs/guide/01-quickstart/
+	- https://open5gs.org/open5gs/docs/guide/02-building-open5gs-from-sources/
+	- https://kkohls.info/guides_open5gs
+	- *Build From Source*
+		- https://open5gs.org/open5gs/docs/guide/02-building-open5gs-from-sources/
+- #### MongoDb
+- *Web*
+	- https://www.mongodb.com/community/forums/t/setting-up-mongodb-v5-0-on-ubuntu-20-core-dump-status-4-ill/120705
+-

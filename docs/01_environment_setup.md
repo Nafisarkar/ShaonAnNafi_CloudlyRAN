@@ -1,3 +1,10 @@
+- *Vmware support AVX instruction passthrough*
+	- *Reason*: mongodb 8.0 requires avx
+	- *steps*:
+	- install vmware
+	- install Vagrant VMware Utility [vmware utility](https://developer.hashicorp.com/vagrant/install/vmware)
+	- intsall vagrant plugin for vmware `vagrant plugin install vagrant-vmware-desktop`
+-
 - *base*
 	- created default env with `vagrant init`
 	- set ubuntu 22.04 as base
@@ -9,4 +16,5 @@
 - *provisioning*
 	- update and upgrade
 	- install git
-	- install fastfech
+	- install mongodb
+	-
