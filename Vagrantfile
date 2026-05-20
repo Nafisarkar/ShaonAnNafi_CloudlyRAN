@@ -19,4 +19,6 @@ Vagrant.configure("2") do |config|
   # provisioning
   config.vm.provision "shell", path: "./scripts/setup_dependencies.sh"
   config.vm.provision "shell", path: "./scripts/build_open5gs.sh"
+  config.vm.provision "shell", path: "./scripts/build_srsran.sh"
+  config.vm.provision "shell", path: "./configs/open5gs/configure_open5gs.sh"
 end

@@ -1,20 +1,28 @@
-- *Vmware support AVX instruction passthrough*
-	- *Reason*: mongodb 8.0 requires avx
-	- *steps*:
-	- install vmware
-	- install Vagrant VMware Utility [vmware utility](https://developer.hashicorp.com/vagrant/install/vmware)
-	- intsall vagrant plugin for vmware `vagrant plugin install vagrant-vmware-desktop`
--
-- *base*
-	- created default env with `vagrant init`
-	- set ubuntu 22.04 as base
-- *network*
-	- assigning static ip for vm 192.168.56.10
-- *resources*
-	- assigning 2 cores
-	- assigning 2GB of ram
-- *provisioning*
-	- update and upgrade
-	- install git
-	- install mongodb
-	-
+## VMware Support for AVX Instruction Passthrough
+
+- **Reason**: MongoDB 8.0 requires AVX
+- **Steps**:
+  - Install VMware
+  - Install Vagrant VMware Utility: [vmware utility](https://developer.hashicorp.com/vagrant/install/vmware)
+  - Install Vagrant plugin for VMware: `vagrant plugin install vagrant-vmware-desktop`
+
+## Base Configuration
+
+- Created default environment with `vagrant init`
+- Set Ubuntu 22.04 as base
+
+## Network Configuration
+
+- Assigning static IP for VM: 192.168.56.10
+
+## Resources Configuration
+
+- Assigning 2 cores
+- Assigning 2GB of RAM
+
+## Provisioning
+
+- Invoke: `setup_dependencies.sh`
+- Invoke: `build_open5gs.sh`
+- Invoke: `build_srsran.sh`
+- Invoke: `configure_open5gs.sh`
