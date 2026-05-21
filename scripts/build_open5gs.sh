@@ -33,6 +33,4 @@ echo "Installing WebUI of Open5GS"
 cd /home/vagrant/open5gs/webui
 
 sudo npm i
-
-
 nohup sudo HOSTNAME=0.0.0.0 npm run dev &

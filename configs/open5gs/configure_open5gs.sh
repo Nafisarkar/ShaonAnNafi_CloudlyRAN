@@ -19,6 +19,9 @@ sudo sed -i '/ngap:/,/metrics:/s/127.0.0.5/10.10.0.2/' "$CONF_DIR/amf.yaml"
 # -- UPF Configuration --
 sudo sed -i 's/address: 127.0.0.7/address: 10.11.0.2/g' "$CONF_DIR/upf.yaml"
 
+# -- SMF PFCP Client (point to UPF) --
+sudo sed -i 's/address: 127.0.0.7/address: 10.11.0.2/g' "$CONF_DIR/smf.yaml"
+
 # -- MME Configuration --
 sudo sed -i 's/mcc: 999/mcc: 001/g' "$CONF_DIR/mme.yaml"
 sudo sed -i 's/mnc: 70/mnc: 01/g' "$CONF_DIR/mme.yaml"

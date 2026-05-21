@@ -49,3 +49,8 @@
 ### Integration
 - https://www.youtube.com/watch?v=dn2V1daWnXY
 - https://www.youtube.com/watch?v=DSxbhpWRvaI
+
+
+## AI & Assistants
+  - Deepseek V4 Flash (Architectural troubleshooting, research and debugging)
+  - Qwen 3.6 Plus (Technical documentation engineering and Markdown formatting)
