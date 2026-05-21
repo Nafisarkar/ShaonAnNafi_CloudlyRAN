@@ -12,6 +12,7 @@
 - https://www.youtube.com/watch?v=aqqyJxvzsag
 
 ### Documentation
+- https://nuradioconcepts.io/2023/12/13/building-a-personal-open-source-5g-network/
 - https://developer.hashicorp.com/vagrant/docs/networking/basic_usage
 - https://developer.hashicorp.com/vagrant/docs/networking/forwarded_ports
 
@@ -27,6 +28,7 @@
 - https://open5gs.org/open5gs/docs/guide/01-quickstart/
 - https://open5gs.org/open5gs/docs/guide/02-building-open5gs-from-sources/
 - https://kkohls.info/guides_open5gs
+- https://hackmd.io/@cho5gsec/Skr2kOkeee
 
 ### Build From Source
 - https://open5gs.org/open5gs/docs/guide/02-building-open5gs-from-sources/
@@ -42,3 +44,8 @@
 - https://docs.srsran.com/projects/project/en/latest/user_manuals/source/installation.html
 - https://hackmd.io/@leo661314/Hkj1B8OD0
 - https://github.com/srsran/oran-sc-ric/blob/main/e2-agents/srsRAN/gnb_zmq.yaml
+- https://github.com/s5uishida/build_srsran_5g_zmq
+
+### Integration
+- https://www.youtube.com/watch?v=dn2V1daWnXY
+- https://www.youtube.com/watch?v=DSxbhpWRvaI

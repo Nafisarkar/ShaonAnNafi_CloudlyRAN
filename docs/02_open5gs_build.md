@@ -25,6 +25,7 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gp
 ## Network Setup
 
 ### Configure TUN Device
+- To allow traffic to flow from the TUN device to physical internet interface, must enable packet forwarding.
 
 See [TUN device configuration](https://github.com/open5gs/open5gs/blob/main/misc/netconf.sh)
 
@@ -33,6 +34,8 @@ sudo ip tuntap add name ogstun mode tun 2>/dev/null || true
 sudo ip addr add 10.45.0.1/16 dev ogstun 2>/dev/null || true
 sudo ip addr add 2001:db8:cafe::1/48 dev ogstun 2>/dev/null || true
 sudo ip link set ogstun up
+
+
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -w net.ipv6.conf.all.forwarding=1
 sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE 2>/dev/null || true

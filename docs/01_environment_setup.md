@@ -1,28 +1,37 @@
-## VMware Support for AVX Instruction Passthrough
+## Prerequisites
 
-- **Reason**: MongoDB 8.0 requires AVX
-- **Steps**:
-  - Install VMware
-  - Install Vagrant VMware Utility: [vmware utility](https://developer.hashicorp.com/vagrant/install/vmware)
-  - Install Vagrant plugin for VMware: `vagrant plugin install vagrant-vmware-desktop`
+- **VMware** (required for AVX passthrough — MongoDB 8.0 needs AVX)
+- **Vagrant + Vagrant VMware Utility**: [download](https://developer.hashicorp.com/vagrant/install/vmware)
+- Install plugin: `vagrant plugin install vagrant-vmware-desktop`
 
-## Base Configuration
+## VM Specs
 
-- Created default environment with `vagrant init`
-- Set Ubuntu 22.04 as base
+| Item          | Value                               |
+|---------------|-------------------------------------|
+| Box           | `bento/ubuntu-22.04` (202510.26.0)  |
+| vCPU          | 2                                   |
+| RAM           | 4 GB                                |
+| Disk          | 50 GB                               |
 
-## Network Configuration
+## Network
 
-- Assigning static IP for VM: 192.168.56.10
+| Interface    | IP               | Purpose                     |
+|--------------|------------------|-----------------------------|
+| Private #1   | `10.10.0.2`      | Control Plane (NGAP/S1AP)   |
+| Private #2   | `10.11.0.2`      | User Plane (GTPU)           |
+| Forwarded    | `9999` → `9999`  | WebUI / debug               |
 
-## Resources Configuration
+## Provisioning Flow
 
-- Assigning 2 cores
-- Assigning 2GB of RAM
+1. **`scripts/setup_dependencies.sh`** — Installs MongoDB 8.0, Node.js 20, build tools (meson, ninja, cmake, etc.), configures TUN/ NAT, disables firewall.
+2. **`scripts/build_open5gs.sh`** — Builds and installs Open5GS.
+3. **`scripts/build_srsran.sh`** — Builds and installs srsRAN.
+4. **`configs/open5gs/configure_open5gs.sh`** — Configures Open5GS components.
+5. **`configs/srsran/configure_srsRAN.sh`** — Configures srsRAN gNB.
 
-## Provisioning
+## Quick Start
 
-- Invoke: `setup_dependencies.sh`
-- Invoke: `build_open5gs.sh`
-- Invoke: `build_srsran.sh`
-- Invoke: `configure_open5gs.sh`
+```bash
+vagrant up
+vagrant ssh
+```
